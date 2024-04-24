@@ -1,0 +1,32 @@
+@import "src/styles/vars";
+
+.statistics_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.header_items {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    color: $color-gray-200;
+    font-weight: 700;
+    background-color: $color-gray-400;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+}
+
+.header_text_todo {
+  color: $color-blue;
+}
+
+.header_text_completed {
+  color: $color-purple;
+}

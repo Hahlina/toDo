@@ -1,0 +1,20 @@
+@import "src/styles/vars.scss";
+
+.header {
+  display: grid;
+  place-items: center;
+  background-color: $color-gray-700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.inputWrapper {
+  position: absolute;
+  bottom: calc($height-input-wrapper / 2 * -1);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}

@@ -1,0 +1,28 @@
+@import "src/styles/vars.scss";
+
+
+%active {
+  cursor: pointer;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.button {
+  background-color: $color-blue-dark;
+  border-radius: 8px;
+  width: 90px;
+  height: 52px;
+  display: flex;
+  place-items: center;
+  gap: 8px;
+  justify-content: center;
+  border: none;
+  color: $color-gray-100;
+  font-weight: bold;
+  @extend %active;
+  transition: background-color 0.3s linear;
+  &:hover {
+    background-color: $color-blue;
+  }
+}
