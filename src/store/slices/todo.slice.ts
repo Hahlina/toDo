@@ -4,6 +4,7 @@ type Todo = {
     id: string;
     text: string;
     isCompleted: boolean;
+    isRemoved: boolean;
 };
 
 type TodoState = {
@@ -21,7 +22,8 @@ const todoSlice = createSlice({
             state.todos.unshift({
                 id: new Date().toISOString(),
                 text: action.payload.trim(),
-                isCompleted: false
+                isCompleted: false,
+                isRemoved: false
             });
         },
         toggleTodo: (state, action: PayloadAction<string>) => {
@@ -30,11 +32,16 @@ const todoSlice = createSlice({
             );
         },
         removeTodo: (state, action: PayloadAction<string>) => {
-            state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+            state.todos = state.todos.map((todo) => (todo.id === action.payload ? { ...todo, isRemoved: true } : todo));
+        },
+        restoreTodo: (state, action: PayloadAction<string>) => {
+            state.todos = state.todos.map((todo) =>
+                todo.id === action.payload ? { ...todo, isRemoved: false } : todo
+            );
         }
     }
 });
 
-export const { addTodo, toggleTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, toggleTodo, removeTodo, restoreTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;

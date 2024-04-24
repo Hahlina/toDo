@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { Button, Input, NotificationContent } from 'src/components';
+import { Button, Input, NotificationContent, Statistics } from 'src/components';
 
 import { useNotification } from 'src/hooks';
 import { NOTIFICATION_TITLE, NOTIFICATION_TYPES, TODO_NOTIFICATIONS } from 'src/constants';
@@ -33,6 +33,7 @@ export const Header = () => {
                     Add
                 </Button>
             </div>
+            <Statistics />
         </header>
     );
 };

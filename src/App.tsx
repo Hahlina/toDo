@@ -1,10 +1,9 @@
-import { Header, Container, Statistics, BaseLayout, TodoList } from 'src/components';
+import { Header, Container, BaseLayout, TodoList } from 'src/components';
 
 export const App = () => (
     <Container>
         <Header />
         <BaseLayout>
-            <Statistics />
             <TodoList />
         </BaseLayout>
     </Container>
