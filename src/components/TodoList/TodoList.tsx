@@ -1,26 +1,28 @@
-import { FC } from 'react';
-
 import { TodoItem } from 'src/components';
+
+import { useAppDispatch, useAppSelector } from 'src/hooks';
+import { removeTodo, toggleTodo } from 'src/store/slices/todo.slice.ts';
 
 import styles from './TodoList.module.scss';
 
-interface TodoListProps {
-    todos: {
-        text: string;
-        isCompleted: boolean;
-    }[];
-}
+export const TodoList = () => {
+    const todos = useAppSelector((state) => state.todos.todos);
+    const dispatch = useAppDispatch();
 
-export const TodoList: FC<TodoListProps> = ({ todos }) => (
-    <ul className={styles.todoList}>
-        {todos.map((todo, index) => (
-            <TodoItem
-                key={index}
-                text={todo.text}
-                isCompleted={todo.isCompleted}
-                onDelete={() => {}}
-                onToggleComplete={() => {}}
-            />
-        ))}
-    </ul>
-);
+    const onDelete = (id: string) => dispatch(removeTodo(id));
+    const onToggleComplete = (id: string) => dispatch(toggleTodo(id));
+
+    return (
+        <ul className={styles.todoList}>
+            {todos?.map((todo) => (
+                <TodoItem
+                    key={todo.id}
+                    text={todo.text}
+                    isCompleted={todo.isCompleted}
+                    onDelete={() => onDelete(todo.id)}
+                    onToggleComplete={() => onToggleComplete(todo.id)}
+                />
+            ))}
+        </ul>
+    );
+};

@@ -1,12 +1,9 @@
-import { FC } from 'react';
+import { useAppSelector } from 'src/hooks';
 
 import styles from './Statistics.module.scss';
 
-interface StatisticsProps {
-    todos: any[];
-}
-
-export const Statistics: FC<StatisticsProps> = ({ todos }) => {
+export const Statistics = () => {
+    const todos = useAppSelector((state) => state.todos.todos);
     const completedTodos = todos.filter((todo) => todo.isCompleted);
 
     return (

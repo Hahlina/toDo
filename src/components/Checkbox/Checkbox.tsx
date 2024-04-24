@@ -1,15 +1,12 @@
-import { FC } from 'react';
+import { forwardRef, type InputHTMLAttributes } from 'react';
 
 import styles from './Checkbox.module.scss';
 
-interface CheckboxProps {
-    isCompleted: boolean;
-    onToggleComplete: () => void;
-}
+type CheckboxProps = InputHTMLAttributes<HTMLInputElement>;
 
-export const Checkbox: FC<CheckboxProps> = ({ isCompleted, onToggleComplete }) => (
+export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => (
     <label>
-        <input type="checkbox" className={styles.check__input} checked={isCompleted} onChange={onToggleComplete} />
-        <span className={styles.check__box} onClick={onToggleComplete} />
+        <input type="checkbox" className={styles.check__input} ref={ref} {...props} />
+        <span className={styles.check__box} />
     </label>
-);
+));
