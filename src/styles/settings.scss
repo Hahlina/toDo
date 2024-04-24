@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import "../../node_modules/modern-normalize/modern-normalize.css";
-@import "./vars";
+@import "vars";
+@import "notification";
 
 body {
   background-color: $color-gray-600;

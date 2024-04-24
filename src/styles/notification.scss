@@ -1,0 +1,53 @@
+@import 'vars';
+
+@mixin toast-styles($color, $border-color) {
+  border: 1px solid $border-color;
+  border-radius: 7px;
+  background-color: rgba(210, 211, 218, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  color: $color;
+}
+
+.toast {
+  background-color: $color-gray-400 !important;
+  font-size: 10px;
+  color: $color-gray-100 !important;
+  border-radius: 10px !important;
+  width: 270px;
+}
+
+.Toastify__toast-container{
+  width: fit-content !important;
+}
+
+.success-toast {
+  @include toast-styles($color-green, $color-green);
+}
+
+.info-toast {
+  @include toast-styles($color-gray-100, $color-gray-100);
+}
+
+.error-toast {
+  @include toast-styles($color-danger, $color-danger);
+}
+
+.progress {
+  height: 2px !important;
+}
+
+.success-progress {
+  background-color: $color-green;
+}
+
+.error-progress {
+  background-color: $color-danger;
+}
+
+.info-progress {
+  background-color: $color-gray-100;
+}
