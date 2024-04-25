@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+| Resource | Url                                                                                                                   |
+| -------- | --------------------------------------------------------------------------------------------------------------------- |
+| Webapp   | https://to-dodo.vercel.app/                                                                                              |
+| Desing   | https://www.figma.com/file/EFM4yFPyIiAo7pnjsnD09Y/ToDo-List-%F0%9F%91%85-(Community)?type=design&node-id=0-1&mode=design&t=RX3jPhxL8S0dJacQ-0 |
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# To-do
 
-Currently, two official plugins are available:
+## How to run the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### To run the project, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone the repository using the following link:
+    ```bash
+    git clone https://github.com/Hahlina/toDo.git
+    ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Install dependencies using the following command:
+    ```bash
+    npm install
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Start the project with the following command:
+    ```bash
+    npm run dev
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technology Stack 🛠️
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Frontend
+
+- **React** - A JavaScript library for building user interfaces.
+- **React Router Dom** - Declarative routing for React.js.
+- **Redux Toolkit** - The official, opinionated, batteries-included toolset for efficient Redux development.
+
+### Code Quality & Linting
+
+- **ESLint** - A pluggable and configurable linter tool for identifying and fixing problems in JavaScript code.
+- **Prettier** - An opinionated code formatter.
