@@ -6,9 +6,10 @@
   max-width: 638px;
   background: $color-gray-500;
   border: none;
-  outline: 1px solid #0d0d0d;
+  outline: 1px solid $color-gray-700;
   border-radius: 8px;
   color: $color-gray-300;
+
   &:focus-visible {
     outline: 1px solid $color-blue-dark;
   }

@@ -1,8 +1,10 @@
+@import "src/styles/vars.scss";
+
 .todoList {
   display: grid;
   gap: 12px;
   padding: 100px 10px 0 10px;
   max-width: calc(638px + 90px + 8px);
   transition: margin-top 0.3s linear;
-  color: #f2f2f2;
+  color: $color-gray-100;
 }

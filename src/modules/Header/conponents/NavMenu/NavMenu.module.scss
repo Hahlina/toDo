@@ -1,3 +1,5 @@
+@import "src/styles/vars";
+
 .navList {
   display: flex;
   list-style: none;
@@ -8,9 +10,9 @@
 .link {
   background-image: linear-gradient(
                   to right,
-                  #055dea,
-                  #0a4ebd 50%,
-                  white 50%
+                  $color-blue ,
+                  $color-blue 50%,
+                  $color-gray-200 50%
   );
   background-size: 200% 100%;
   background-position: -100%;
@@ -24,7 +26,7 @@
 
 .link:before {
   content: "";
-  background: #247cff;
+  background: $color-blue;
   display: block;
   position: absolute;
   bottom: -3px;
@@ -50,12 +52,12 @@
   position: relative;
 
   &:hover {
-    color: #247cff;
+    color: $color-blue;
   }
 
   &:before {
     content: "";
-    background: #247cff;
+    background: $color-blue;
     display: block;
     position: absolute;
     bottom: -3px;

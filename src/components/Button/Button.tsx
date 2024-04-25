@@ -6,7 +6,6 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLB
     ({ children, ...props }, ref) => (
         <button className={styles.button} {...props} ref={ref}>
             {children}
-            <img src="./src/assets/plus.svg" alt="plus" />
         </button>
     )
 );

@@ -2,12 +2,9 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  position: absolute;
   transition: all 0.3s linear;
 }
-label {
-  height: 20px;
-}
+
 .check__box {
   cursor: pointer;
   width: 20px;

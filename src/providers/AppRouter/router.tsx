@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { TodoLayout } from 'src/components';
-import { HomeContent, RemovedContent, CompletedContent } from 'src/modules';
+import { ActiveTodoContent, RemovedTodoContent, CompletedTodoContent, TodoLayout } from 'src/modules';
 
 import { APP_ROUTES } from 'src/constants';
 
@@ -12,15 +11,15 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: APP_ROUTES.HOME,
-                element: <HomeContent />
+                element: <ActiveTodoContent />
             },
             {
                 path: APP_ROUTES.REMOVED,
-                element: <RemovedContent />
+                element: <RemovedTodoContent />
             },
             {
                 path: APP_ROUTES.COMPLETED,
-                element: <CompletedContent />
+                element: <CompletedTodoContent />
             }
         ]
     }
