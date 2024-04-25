@@ -11,5 +11,6 @@ export enum NOTIFICATION_TITLE {
 export enum TODO_NOTIFICATIONS {
     ADD = 'Todo created successfully',
     REMOVE = 'Todo removed successfully',
-    TOGGLE = 'Todo updated successfully'
+    TOGGLE = 'Todo updated successfully',
+    RESTORE = 'Todo restored successfully'
 }

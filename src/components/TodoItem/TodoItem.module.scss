@@ -39,9 +39,21 @@
       background-image: url("/assets/trashhover.svg");
     }
   }
-}
 
-.completed {
-  text-decoration: line-through $color-purple-dark;
-  text-decoration-thickness: 2px;
+  .restore {
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/restore.svg");
+    transition: transform 0.3s linear;
+
+    &:hover {
+      background-color: $color-gray-500;
+      background-image: url("/assets/restorehover.svg");
+    }
+  }
+
+  .completed {
+    text-decoration: line-through $color-purple-dark;
+    text-decoration-thickness: 2px;
+  }
 }

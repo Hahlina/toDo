@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { TodoItem } from 'src/components';
+import { EmptyList, TodoItem } from 'src/components';
 
 import { useActionsTodo } from 'src/hooks';
 import type { Todo } from 'src/types';
@@ -12,7 +12,9 @@ interface TodoListProps {
 }
 
 export const TodoList: FC<TodoListProps> = ({ todos }) => {
-    const { onDelete, onToggleComplete } = useActionsTodo();
+    const { onDelete, onToggleComplete, onRestore } = useActionsTodo();
+
+    if (!todos.length) return <EmptyList />;
 
     return (
         <ul className={styles.todoList}>
@@ -21,6 +23,8 @@ export const TodoList: FC<TodoListProps> = ({ todos }) => {
                     key={todo.id}
                     text={todo.text}
                     isCompleted={todo.isCompleted}
+                    isRemoved={todo.isRemoved}
+                    onRestore={() => onRestore(todo.id)}
                     onDelete={() => onDelete(todo.id)}
                     onToggleComplete={() => onToggleComplete(todo.id)}
                 />
