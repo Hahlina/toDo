@@ -1,11 +1,9 @@
-import { useAppSelector } from 'src/hooks';
+import { useTodos } from 'src/hooks';
 
 import styles from './Statistics.module.scss';
 
 export const Statistics = () => {
-    const todos = useAppSelector((state) => state.todos.todos);
-    const completedTodos = todos.filter((todo) => todo.isCompleted);
-
+    const { completedTodos, todos } = useTodos();
     return (
         <div className={styles.statistics_container}>
             <div className={styles.statistics_wrapper}>

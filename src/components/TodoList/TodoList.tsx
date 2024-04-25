@@ -1,13 +1,19 @@
+import type { FC } from 'react';
+
 import { TodoItem, NotificationContent } from 'src/components';
 
-import { useAppDispatch, useAppSelector, useNotification } from 'src/hooks';
+import { useAppDispatch, useNotification } from 'src/hooks';
 import { NOTIFICATION_TITLE, NOTIFICATION_TYPES, TODO_NOTIFICATIONS } from 'src/constants';
 import { removeTodo, toggleTodo } from 'src/store/slices/todo.slice.ts';
+import type { Todo } from 'src/types';
 
 import styles from './TodoList.module.scss';
 
-export const TodoList = () => {
-    const todos = useAppSelector((state) => state.todos.todos);
+interface TodoListProps {
+    todos: Todo[];
+}
+
+export const TodoList: FC<TodoListProps> = ({ todos }) => {
     const dispatch = useAppDispatch();
     const notify = useNotification();
 

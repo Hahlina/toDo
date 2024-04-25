@@ -1,10 +1,3 @@
-import { Header, Container, BaseLayout, TodoList } from 'src/components';
+import { AppRouter } from 'src/providers';
 
-export const App = () => (
-    <Container>
-        <Header />
-        <BaseLayout>
-            <TodoList />
-        </BaseLayout>
-    </Container>
-);
+export const App = () => <AppRouter />;

@@ -1,11 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Todo = {
-    id: string;
-    text: string;
-    isCompleted: boolean;
-    isRemoved: boolean;
-};
+import type { Todo } from 'src/types';
 
 type TodoState = {
     todos: Todo[];
