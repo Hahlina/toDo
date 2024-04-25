@@ -26,7 +26,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <NavMenu />
-            <img src="./src/assets/logo.svg" alt="logo" className={styles.logo} />
+            <img src="./assets/logo.svg" alt="logo" className={styles.logo} />
             <div className={styles.inputWrapper}>
                 <Input
                     value={inputValue}
