@@ -26,7 +26,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <NavMenu />
-            <img src="./assets/logo.svg" alt="logo" className={styles.logo} />
+            <img src="/assets/logo.svg" alt="logo" className={styles.logo} />
             <div className={styles.inputWrapper}>
                 <Input
                     value={inputValue}
@@ -35,7 +35,7 @@ export const Header = () => {
                 />
                 <Button onClick={handleAddTodo} disabled={!inputValue}>
                     Add
-                    <img src="./src/assets/plus.svg" alt="plus" />
+                    <img src="/assets/plus.svg" alt="plus" />
                 </Button>
             </div>
             <Statistics />

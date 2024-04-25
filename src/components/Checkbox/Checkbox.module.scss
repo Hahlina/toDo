@@ -11,16 +11,16 @@
   height: 20px;
   transition: all 0.3s linear;
   position: absolute;
-  background-image: url(./src/assets/unchecked.svg);
+  background-image: url(/assets/unchecked.svg);
   background-repeat: no-repeat;
 
   &:hover {
-    background-image: url(./src/assets/unchecked-hover.svg);
+    background-image: url(/assets/unchecked-hover.svg);
   }
 }
 
 .check__input:checked + .check__box {
-  background-image: url(./src/assets/checked.svg);
+  background-image: url(/assets/checked.svg);
   &:hover {
     opacity: 0.9;
   }

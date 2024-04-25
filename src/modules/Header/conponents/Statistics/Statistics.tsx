@@ -4,6 +4,7 @@ import styles from './Statistics.module.scss';
 
 export const Statistics = () => {
     const { completedTodos, todos } = useTodos();
+
     return (
         <div className={styles.statistics_container}>
             <div className={styles.statistics_wrapper}>
